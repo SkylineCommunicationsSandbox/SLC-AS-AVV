@@ -4,7 +4,8 @@ namespace SCL_SL_CICD_1
 	using System.Collections.Generic;
 	using System.Globalization;
 	using System.Text;
-	using Skyline.DataMiner.Automation;
+    using Empower.Library.Room0;
+    using Skyline.DataMiner.Automation;
 	
 	/// <summary>
 	/// Represents a DataMiner Automation script.
@@ -18,6 +19,9 @@ namespace SCL_SL_CICD_1
 		public void Run(IEngine engine)
 		{
 			engine.GenerateInformation("Test1");
+			var order = OrderFactory.CreateOrder("Order 1");
+			order.Dispatch("AaronVV");
+
 		}
 	}
 }
