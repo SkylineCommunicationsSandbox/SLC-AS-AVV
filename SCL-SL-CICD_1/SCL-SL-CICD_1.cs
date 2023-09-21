@@ -19,7 +19,7 @@ namespace SCL_SL_CICD_1
 		public void Run(IEngine engine)
 		{
 			engine.GenerateInformation("Test1");
-			var order = OrderFactory.CreateOrder("Order 1");
+			var order = OrderFactory.CreateOrder("JansChange Order 1");
 			order.Dispatch("AaronVV");
 
 		}
